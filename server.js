@@ -17,12 +17,12 @@ app.get('/cats', function(request, response){
     response.render('cats');
 })
 
-app.get('/cars/new', function(request, response){
+app.get('/cars/new', function(req, res){
 
-    response.render('newcar');
+    res.render('newcar');
 })
 
-app.get('/puppy', function(request, response){
+app.get('/puppy', function(req, res){
     var cat = {
         name: 'zeus',
         color: 'tan'
@@ -33,7 +33,7 @@ app.get('/puppy', function(request, response){
         {nick_name: "fortune", email: "mrlat@professionalcats.com"},
         {nick_name: "thor", email: "mrmat@professionalcats.com"},        
     ];
-    response.render('details', {whatever: my_arr, cat});
+    res.render('details', {whatever: my_arr, cat});
 })
 
 app.get('/meow', function(request, response){
