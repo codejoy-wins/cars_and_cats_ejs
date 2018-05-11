@@ -22,6 +22,49 @@ app.get('/cars/new', function(request, response){
     response.render('newcar');
 })
 
+app.get('/puppy', function(request, response){
+    var cat = {
+        name: 'zeus',
+        color: 'tan'
+    }
+    var my_arr = [
+        {nick_name: "quack", email: "mrcat@professionalcats.com"},
+        {nick_name: "daft", email: "mrkat@professionalcats.com"},
+        {nick_name: "fortune", email: "mrlat@professionalcats.com"},
+        {nick_name: "thor", email: "mrmat@professionalcats.com"},        
+    ];
+    response.render('details', {whatever: my_arr, cat});
+})
+
+app.get('/meow', function(request, response){
+    var cat = {
+        name: 'adorabubbles',
+        color: 'orange'
+    }
+    var my_arr = [
+        {nick_name: "quack", email: "mrcat@professionalcats.com"},
+        {nick_name: "daft", email: "mrkat@professionalcats.com"},
+        {nick_name: "fortune", email: "mrlat@professionalcats.com"},
+        {nick_name: "thor", email: "mrmat@professionalcats.com"},        
+    ];
+    response.render('details', {cat, whatever: my_arr});
+})
+
+app.get('/siamese', function(request, response){
+    var cat = {
+        name: 'Imotep',
+        color: 'white'
+    }
+    var my_arr = [
+        {nick_name: "quack", email: "mrcat@professionalcats.com"},
+        {nick_name: "daft", email: "mrkat@professionalcats.com"},
+        {nick_name: "fortune", email: "mrlat@professionalcats.com"},
+        {nick_name: "thor", email: "mrmat@professionalcats.com"},        
+    ];
+    response.render('details', {cat, whatever: my_arr});
+})
+
+
 app.listen(8000, function(){
     console.log("Listening on port 8000");
 })
